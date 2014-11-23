@@ -15,8 +15,7 @@
 		<br /> <br />
 		<div id="searchbox">
 			Search:
-			<g:remoteField name="search" paramName="searchValue"
-				controller="entry" action="search" update="searchresults" />
+			<input type="text" name="search" onkeyup="jQuery.ajax({type:'POST',data:'searchValue='+encodeURIComponent(this.value), url:'/telephoneDirectory/entry/search',success:function(data,textStatus){jQuery('#searchresults').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});" />
 		</div>
 
 		<g:render template="searchResults" />
