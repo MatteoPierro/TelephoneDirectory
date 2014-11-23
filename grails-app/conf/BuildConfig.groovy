@@ -56,8 +56,8 @@ grails.project.dependency.resolution = {
 
     plugins {
         // plugins for the build system only
-        //build ":tomcat:7.0.55"
-        build ":jetty:2.0.3"
+        build ":tomcat:7.0.55"
+        //build ":jetty:2.0.3"
         
         compile ':heroku:1.0.1'
         compile ':cloud-support:1.0.8'

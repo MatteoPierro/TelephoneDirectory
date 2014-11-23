@@ -9,8 +9,9 @@ class Entry {
 	String phoneNumber
 
     static constraints = {
-		firstName(blank:false)
-		lastName(blank:false)
+		firstName(nullable:false, blank:false)
+		lastName(nullable:false, blank:false)
+		phoneNumber(nullable:false, blank:false)
 		phoneNumber(matches: "^\\+[0-9]+\\s[0-9]+\\s[0-9]{6,}\$")
     }
 }
